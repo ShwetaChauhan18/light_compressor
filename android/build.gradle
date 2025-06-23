@@ -1,5 +1,3 @@
-package android
-
 group 'com.abedelazizshe.light_compressor'
 version '1.0-SNAPSHOT'
 

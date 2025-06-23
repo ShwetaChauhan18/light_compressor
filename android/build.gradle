@@ -1,17 +1,21 @@
-group 'com.abedelazizshe.light_compressor'
-version '1.0-SNAPSHOT'
-
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
+group = 'com.abedelazizshe.light_compressor'
+version = '1.0-SNAPSHOT'
+
 android {
+    namespace 'com.abedelazizshe.light_compressor'
     compileSdk = 35
-    namespace = 'com.abedelazizshe.light_compressor'
 
     defaultConfig {
         minSdk = 24
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
     }
 
     compileOptions {
@@ -21,10 +25,6 @@ android {
 
     kotlinOptions {
         jvmTarget = "21"
-    }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
     }
 
     lint {
